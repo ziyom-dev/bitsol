@@ -6,11 +6,20 @@ body {
   .on-img-text {
     font-size: 0.825rem;
   }
+  .bit-slider .carousel-item img {
+    height: 540px;
+  }
+  .bit-slider .carousel-item .slider-capiton_text {
+    font-size: 3rem;
+  }
 }
 @media screen and (max-width: 1199px) {
   html,
 body {
     font-size: 12px;
+  }
+  .cta-slider-item {
+    padding: 10rem 2rem;
   }
 }
 @media screen and (max-width: 991px) {
@@ -27,6 +36,8 @@ body {
   .on-img-text {
     position: relative;
     margin: 0 10px;
+    margin-bottom: -20%;
+    inset: 0;
   }
   .section-content {
     padding-top: 3rem;
@@ -67,6 +78,9 @@ body {
   .bit-header .navbar-brand img {
     height: 3rem;
   }
+  .bit-header .navbar {
+    padding: 8px 20px;
+  }
   .bit-slick-controls {
     top: -65px;
   }
@@ -102,6 +116,9 @@ footer .footer-main .work-time {
   footer .footer-main .footer-nav {
     margin: 3.125rem 0;
   }
+  .bit-slider .carousel-item img {
+    height: 460px;
+  }
 }
 @media screen and (max-width: 767.98px) {
   footer .footer-main {
@@ -118,7 +135,7 @@ footer .footer-main .work-time {
     text-align: center;
   }
   .on-img-text {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
   .services p {
     min-width: 70%;
@@ -127,10 +144,34 @@ footer .footer-main .work-time {
     background: #fff;
     position: fixed;
     inset: 0;
-    top: 70px;
+    top: 61px;
   }
   .pre-header {
     display: none;
+  }
+  .md-full-width-img {
+    padding: 0;
+    margin-bottom: -7rem;
+  }
+  .md-full-width-img img {
+    height: 460px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .center-img .md-full-width-img {
+    margin: 0;
+  }
+  .center-img .image-absolute-center {
+    top: auto;
+    bottom: 410px;
+  }
+  .center-img p {
+    padding: 0;
+    padding-bottom: 50px;
+  }
+  .bit-service-list > div,
+.bit-service-list-alt > div {
+    margin-bottom: 50px;
   }
 }
 @media screen and (max-width: 575.98px) {
@@ -138,9 +179,21 @@ footer .footer-main .work-time {
     margin-bottom: 20px;
   }
   .bit-slider .carousel-item .slider-capiton_text {
-    font-size: 1.5rem;
+    font-size: 20px;
+    max-width: 320px;
+    margin: 0 auto;
   }
   .services p {
     min-width: 100%;
+  }
+  .bit-grid-content p {
+    font-size: 1.25rem;
+  }
+  .bit-news-card .card-body {
+    padding: 20px;
+    font-size: 16px;
+  }
+  .bg-image {
+    min-height: 400px;
   }
 }

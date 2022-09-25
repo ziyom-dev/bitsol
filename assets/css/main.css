@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.navbar-toggler .navbar-toggler-close {
+  display: initial;
+}
+.navbar-toggler .navbar-toggler-open {
+  display: none;
+}
+.navbar-toggler.collapsed .navbar-toggler-close {
+  display: none;
+}
+.navbar-toggler.collapsed .navbar-toggler-open {
+  display: initial;
+}
+
 body {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
@@ -33,6 +46,7 @@ section .section-title {
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: 1rem;
+  text-align: center;
 }
 section .section-text {
   font-weight: 400;
@@ -125,6 +139,11 @@ section .section-text {
 .bit-slider .carousel-item {
   position: relative;
 }
+.bit-slider .carousel-item img {
+  height: 800px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .bit-slider .carousel-item .slider-capiton {
   position: absolute;
   inset: 0;
@@ -176,6 +195,15 @@ section .section-text {
   position: relative;
   color: #fff;
   background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   min-height: 25rem;
 }
 .bg-image::before {
@@ -210,13 +238,13 @@ section .section-text {
 }
 
 .section-header {
-  margin-bottom: 3rem;
+  margin-bottom: 3.125rem;
 }
 .section-header .title {
   text-align: center;
   font-weight: 700;
   font-size: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3.125rem;
 }
 
 .services {
@@ -503,8 +531,9 @@ footer .footer-main .footer-brand img {
   width: 100%;
 }
 footer .footer-nav {
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 footer .footer-nav .nav-link {
   color: #000;
@@ -513,6 +542,7 @@ footer .footer-nav .nav-link {
   -webkit-transition: 0.2s ease;
   -o-transition: 0.2s ease;
   transition: 0.2s ease;
+  padding: 0.5rem 1.5rem;
 }
 footer .footer-nav .nav-link.active, footer .footer-nav .nav-link:hover {
   color: #ffd28e;
@@ -574,16 +604,21 @@ footer .footer-line span {
   display: block;
   width: 2px;
   position: absolute;
-  inset: 0 50%;
+  inset: 3.125rem 50%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(10%, #fff), color-stop(80%, #fff), to(rgba(255, 255, 255, 0)));
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 10%, #fff 80%, rgba(255, 255, 255, 0) 100%);
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 10%, #fff 80%, rgba(255, 255, 255, 0) 100%);
 }
-.bit-grid-block:not(:first-child) {
+.bit-grid-block:not(:first-of-type) {
   margin-top: -8%;
 }
 .bit-grid-block > :nth-child(3) {
   margin-top: 25%;
+}
+.bit-grid .section-title {
+  color: #000;
+  text-align: center;
+  margin-bottom: 3.125rem;
 }
 .bit-grid-item {
   display: -webkit-box;
@@ -681,19 +716,8 @@ footer .footer-line span {
   z-index: 1;
 }
 
-.page-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-}
 .page-header .title {
+  text-align: center;
   font-weight: 700;
   font-size: 2rem;
   color: #ffffff;
@@ -732,11 +756,6 @@ footer .footer-line span {
 .bit-about {
   text-align: center;
 }
-.bit-about .title {
-  font-weight: 700;
-  font-size: 2rem;
-  margin-bottom: 0.875rem;
-}
 .bit-about p {
   line-height: 120%;
 }
@@ -763,12 +782,10 @@ footer .footer-line span {
   height: 100px;
 }
 
-.bit-news-card {
-  border: 0;
-}
 .bit-news-card .card-body {
   padding: 2rem;
-  padding-right: 6rem;
+  padding-right: 4rem;
+  border: 1px solid #F1F1F1;
 }
 
 .bit-service-list {
@@ -828,4 +845,16 @@ footer .footer-line span {
 
 .footer-contacts .pre-header_link {
   color: #000;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  font-size: 2rem;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }

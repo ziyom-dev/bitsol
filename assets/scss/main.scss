@@ -2,6 +2,7 @@
 
 $dark: #343434;
 $gold: #ffd28e;
+$px50: 3.125rem;
 
 @mixin magic-border($width, $color, $duration, $direction) {
   position: relative;
@@ -33,6 +34,27 @@ $gold: #ffd28e;
       transition-delay: 0s, $duration, $duration * 2;
     }
   }
+}
+
+.navbar-toggler {
+  .navbar-toggler-close {
+    display: initial;
+  }
+
+  .navbar-toggler-open {
+    display: none;
+  }
+
+  &.collapsed {
+    .navbar-toggler-close {
+      display: none;
+    }
+
+    .navbar-toggler-open {
+      display: initial;
+    }
+  }
+
 }
 
 body {
@@ -71,6 +93,7 @@ section {
       font-weight: 700;
       font-size: 2rem;
       margin-bottom: 1rem;
+      text-align: center;
     }
 
     &-text {
@@ -176,6 +199,11 @@ section {
     .carousel-item {
       position: relative;
 
+      img {
+        height: 800px;
+        object-fit: cover;
+      }
+
       .slider-capiton {
         position: absolute;
         inset: 0;
@@ -228,6 +256,9 @@ section {
   position: relative;
   color: #fff;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-height: 25rem;
 
 
@@ -273,13 +304,12 @@ section {
 }
 
 .section-header {
-  margin-bottom: 3rem;
-
+  margin-bottom: $px50;
   .title {
     text-align: center;
     font-weight: 700;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: $px50;
   }
 }
 
@@ -436,7 +466,7 @@ section {
   .title {
     font-weight: 700;
     font-size: 2rem;
-    margin-bottom: 3.125rem;
+    margin-bottom: $px50;
     text-align: center;
   }
 
@@ -539,7 +569,7 @@ footer {
   }
 
   .footer-nav {
-    justify-content: space-around;
+    justify-content: center;
 
     .nav {
       &-link {
@@ -547,6 +577,7 @@ footer {
         font-weight: 500;
         font-size: 1rem;
         transition: 0.2s ease;
+        padding: .5rem 1.5rem;
         // margin-left: 3rem;
 
         &.active,
@@ -612,18 +643,24 @@ footer {
     display: block;
     width: 2px;
     position: absolute;
-    inset: 0 50%;
+    inset: $px50 50%;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 10%, #fff 80%, rgba(255, 255, 255, 0) 100%);
   }
 
   &-block {
-    &:not(:first-child) {
+    &:not(:first-of-type) {
       margin-top: -8%;
     }
 
     &> :nth-child(3) {
       margin-top: 25%;
     }
+  }
+
+  .section-title{
+    color: #000;
+    text-align: center;
+    margin-bottom: $px50;
   }
 
   &-item {
@@ -707,12 +744,9 @@ footer {
 }
 
 .page-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 
   .title {
+    text-align: center;
     font-weight: 700;
     font-size: 2rem;
     color: #ffffff;
@@ -751,12 +785,6 @@ footer {
 .bit-about {
   text-align: center;
 
-  .title {
-    font-weight: 700;
-    font-size: 2rem;
-    margin-bottom: 0.875rem;
-  }
-
   p {
     line-height: 120%;
   }
@@ -785,11 +813,12 @@ footer {
 }
 
 .bit-news-card {
-  border: 0;
+  // border: 0;
 
   .card-body {
     padding: 2rem;
-    padding-right: 6rem;
+    padding-right: 4rem;
+    border: 1px solid #F1F1F1;
   }
 }
 
@@ -847,7 +876,7 @@ footer {
   text-align: center;
 
   img {
-    margin: 3.125rem 0;
+    margin: $px50 0;
     width: 100%;
   }
 }
@@ -856,4 +885,15 @@ footer {
   .pre-header_link {
     color: #000;
   }
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  font-size: 2rem;
+}
+
+.img-cover{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
